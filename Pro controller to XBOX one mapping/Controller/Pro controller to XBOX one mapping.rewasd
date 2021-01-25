@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 3.0,
+  "appVersion": "5.6.1",
+  "config": {
+    "appName": "Pro controller to XBOX one mapping",
+    "minTimeUnit": 1
+  },
+  "devices": {
+    "hardware": [
+      {
+        "id": 1,
+        "name": "gamepad",
+        "convertToVirtual": true
+      }
+    ],
+    "virtual": {
+      "gamepads": [
+        {
+          "id": 1,
+          "type": "xboxonebt"
+        }
+      ]
+    }
+  },
+  "masks": [
+    {
+      "id": 1,
+      "set": [
+        {
+          "deviceId": 1,
+          "buttonId": 1,
+          "description": "XB, Stadia: A / DS4: Cross / Nintendo: B"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "set": [
+        {
+          "deviceId": 1,
+          "buttonId": 2,
+          "description": "XB, Stadia: B / DS4: Circle / Nintendo: A"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "set": [
+        {
+          "deviceId": 1,
+          "buttonId": 3,
+          "description": "XB, Stadia: X / DS4: Square / Nintendo: Y"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "set": [
+        {
+          "deviceId": 1,
+          "buttonId": 4,
+          "description": "XB, Stadia: Y / DS4: Triangle / Nintendo: X"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "set": [
+        {
+          "deviceId": 1,
+          "buttonId": 11,
+          "description": "XB, Nintendo: Home / DS4: PS / Stadia: Stadia"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "set": [
+        {
+          "deviceId": 1,
+          "buttonId": 12,
+          "description": "DS4: TouchPadClick / Nintendo, Stadia: Capture"
+        }
+      ]
+    }
+  ],
+  "mappings": [
+    {
+      "condition": {
+        "mask": {
+          "id": 5,
+          "activator": {
+            "type": "single",
+            "mode": "hold_until_release"
+          }
+        }
+      },
+      "macros": [
+        {
+          "keyboard": {
+            "buttonId": 176,
+            "description": "DIK_VOLUMEUP"
+          }
+        }
+      ]
+    },
+    {
+      "condition": {
+        "mask": {
+          "id": 6,
+          "activator": {
+            "type": "single",
+            "mode": "hold_until_release"
+          }
+        }
+      },
+      "macros": [
+        {
+          "keyboard": {
+            "buttonId": 174,
+            "description": "DIK_VOLUMEDOWN"
+          }
+        }
+      ]
+    },
+    {
+      "condition": {
+        "hardware": {
+          "deviceId": 1,
+          "buttonId": 1,
+          "description": "XB, Stadia: A / DS4: Cross / Nintendo: B"
+        }
+      },
+      "hardware": {
+        "buttonId": 2,
+        "description": "XB, Stadia: B / DS4: Circle / Nintendo: A"
+      }
+    },
+    {
+      "condition": {
+        "hardware": {
+          "deviceId": 1,
+          "buttonId": 2,
+          "description": "XB, Stadia: B / DS4: Circle / Nintendo: A"
+        }
+      },
+      "hardware": {
+        "buttonId": 1,
+        "description": "XB, Stadia: A / DS4: Cross / Nintendo: B"
+      }
+    },
+    {
+      "condition": {
+        "hardware": {
+          "deviceId": 1,
+          "buttonId": 3,
+          "description": "XB, Stadia: X / DS4: Square / Nintendo: Y"
+        }
+      },
+      "hardware": {
+        "buttonId": 4,
+        "description": "XB, Stadia: Y / DS4: Triangle / Nintendo: X"
+      }
+    },
+    {
+      "condition": {
+        "hardware": {
+          "deviceId": 1,
+          "buttonId": 4,
+          "description": "XB, Stadia: Y / DS4: Triangle / Nintendo: X"
+        }
+      },
+      "hardware": {
+        "buttonId": 3,
+        "description": "XB, Stadia: X / DS4: Square / Nintendo: Y"
+      }
+    }
+  ]
+}
